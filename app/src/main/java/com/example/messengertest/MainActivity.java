@@ -31,7 +31,10 @@ public class MainActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-
+        if(mAuth != null){
+            Intent intent = new Intent(MainActivity.this,Main_Screen.class);
+            startActivity(intent);
+        }
         Change = findViewById(R.id.change);
 
         Change.setOnClickListener(new View.OnClickListener() {
